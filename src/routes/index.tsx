@@ -8,7 +8,7 @@ import { ContactSection } from "@/components/site/ContactSection";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { WhatsAppButton } from "@/components/site/WhatsAppButton";
 
-const TITLE = "VérticeAV | Producción Audiovisual, Audio, Video e Iluminación";
+const TITLE = "ARGPRODUC | Producción Audiovisual, Audio, Video e Iluminación";
 const DESCRIPTION =
   "Servicios audiovisuales integrales: sonido, iluminación, pantallas LED, streaming, producción de TV, cine y postproducción de audio para eventos en Chile.";
 

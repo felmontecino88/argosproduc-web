@@ -87,7 +87,7 @@ export function SiteFooter() {
       </div>
 
       <div className="section-shell mt-12 border-t border-border pt-6 text-xs text-muted-foreground">
-        © {new Date().getFullYear()} VérticeAV. Todos los derechos reservados.
+        © {new Date().getFullYear()} ARGPRODUC. Todos los derechos reservados.
       </div>
     </footer>
   );
