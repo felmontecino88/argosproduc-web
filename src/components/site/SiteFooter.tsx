@@ -1,5 +1,6 @@
-import { Facebook, Instagram, Linkedin, Radio } from "lucide-react";
+import { Facebook, Instagram, Linkedin } from "lucide-react";
 import { NAV_SECTIONS, scrollToSection } from "./nav-config";
+import cubeLogo from "@/assets/argproduc-cube.png.asset.json";
 
 export function SiteFooter() {
   return (
@@ -7,11 +8,9 @@ export function SiteFooter() {
       <div className="section-shell grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
         <div className="min-w-0">
           <div className="flex items-center gap-2">
-            <span className="grid size-9 shrink-0 place-items-center rounded-md bg-primary">
-              <Radio className="size-4 text-primary-foreground" />
-            </span>
+            <img src={cubeLogo.url} alt="ARGPRODUC" className="size-9 shrink-0 object-contain" />
             <span className="font-display text-sm font-extrabold uppercase tracking-[0.22em]">
-              Vértice<span className="text-neon">AV</span>
+              ARG<span className="text-neon">PRODUC</span>
             </span>
           </div>
           <p className="mt-4 max-w-xs text-sm text-muted-foreground">

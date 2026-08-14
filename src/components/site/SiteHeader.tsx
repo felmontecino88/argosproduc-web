@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
-import { Instagram, Linkedin, Menu, X, Radio } from "lucide-react";
+import { Instagram, Linkedin, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { NAV_SECTIONS, scrollToSection } from "./nav-config";
+import cubeLogo from "@/assets/argproduc-cube.png.asset.json";
 
 function NavButton({ id, label }: { id: string; label: string }) {
   return (
@@ -46,11 +47,14 @@ export function SiteHeader({ onQuote }: { onQuote?: () => void }) {
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className="flex min-w-0 items-center gap-2 text-left"
         >
-          <span className="grid size-9 shrink-0 place-items-center rounded-md bg-primary">
-            <Radio className="size-4 text-primary-foreground" />
-          </span>
+          <img
+            src={cubeLogo.url}
+            alt="ARGPRODUC"
+            className="size-9 shrink-0 object-contain"
+            loading="eager"
+          />
           <span className="truncate font-display text-sm font-extrabold uppercase tracking-[0.22em]">
-            Vértice<span className="text-neon">AV</span>
+            ARG<span className="text-neon">PRODUC</span>
           </span>
         </button>
 
