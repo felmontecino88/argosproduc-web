@@ -6,7 +6,7 @@ import { scrollToSection } from "./nav-config";
 
 export function Hero() {
   return (
-    <section id="inicio" className="relative h-[100svh] w-full overflow-hidden">
+    <section id="inicio" className="relative h-svh w-full overflow-hidden">
       {/* REEMPLAZAR: coloca tu video en public/assets/hero-video.mp4 y el poster en public/assets/hero-poster.jpg */}
       <video
         className="absolute inset-0 size-full object-cover"

@@ -13,7 +13,10 @@ export function QuoteDialog({ children }: { children: ReactNode }) {
   return (
     <Dialog>
       <DialogTrigger asChild>{children}</DialogTrigger>
-      <DialogContent className="max-h-[90dvh] overflow-y-auto border-border bg-surface sm:max-w-lg">
+      <DialogContent
+        onOpenAutoFocus={(e) => e.preventDefault()}
+        className="max-h-[90dvh] overflow-y-auto border-border bg-surface sm:max-w-lg"
+      >
         <DialogHeader>
           <DialogTitle className="text-2xl">Cotizar Proyecto</DialogTitle>
           <DialogDescription>

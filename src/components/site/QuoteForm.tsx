@@ -33,7 +33,20 @@ export function QuoteForm({ compact = false }: { compact?: boolean }) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="grid gap-4">
+    <form
+      onSubmit={handleSubmit}
+      name="cotizacion"
+      method="POST"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+      className="grid gap-4"
+    >
+      {/* Campo oculto obligatorio para Netlify */}
+      <input type="hidden" name="form-name" value="cotizacion" />
+      <p className="hidden">
+        <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+      </p>
+
       <div className={compact ? "grid gap-4" : "grid gap-4 sm:grid-cols-2"}>
         <div className="grid gap-2">
           <Label htmlFor="qf-name">Nombre completo</Label>

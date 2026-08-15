@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Linkedin } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Target } from "lucide-react";
 import { NAV_SECTIONS, scrollToSection } from "./nav-config";
 import cubeLogo from "@/assets/argproduc-cube.png.asset.json";
 
@@ -8,7 +8,7 @@ export function SiteFooter() {
       <div className="section-shell grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
         <div className="min-w-0">
           <div className="flex items-center gap-2">
-            <img src={cubeLogo.url} alt="ARGPRODUC" className="size-9 shrink-0 object-contain" />
+            <img src="/assets/argproduc-cube.svg" alt="ARGPRODUC" className="size-9 shrink-0 object-contain" />
             <span className="font-display text-sm font-extrabold uppercase tracking-[0.22em]">
               ARG<span className="text-neon">PRODUC</span>
             </span>
@@ -69,9 +69,9 @@ export function SiteFooter() {
           <h3 className="text-xs font-bold uppercase tracking-[0.2em]">Síguenos</h3>
           <div className="mt-4 flex gap-2">
             {[
-              { icon: Instagram, label: "Instagram", href: "https://instagram.com" },
-              { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com" },
-              { icon: Facebook, label: "Facebook", href: "https://facebook.com" },
+              { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/argproduc?igsh=MXI5NjVkMXhvZmU1dw%3D%3D&utm_source=qr" },
+              { icon: Linkedin, label: "LinkedIn", href: "https://cl.linkedin.com/company/argos-producciones-spa" },
+              { icon: Facebook, label: "Facebook", href: "https://www.facebook.com/share/1ENNTA3oUH/?mibextid=wwXIfr" },
             ].map((social) => (
               <a
                 key={social.label}

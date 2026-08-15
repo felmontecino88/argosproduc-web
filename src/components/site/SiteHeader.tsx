@@ -48,7 +48,7 @@ export function SiteHeader({ onQuote }: { onQuote?: () => void }) {
           className="flex min-w-0 items-center gap-2 text-left"
         >
           <img
-            src={cubeLogo.url}
+            src="/assets/argproduc-cube.svg"
             alt="ARGPRODUC"
             className="size-9 shrink-0 object-contain"
             loading="eager"
@@ -66,14 +66,14 @@ export function SiteHeader({ onQuote }: { onQuote?: () => void }) {
 
         <div className="hidden items-center gap-2 lg:flex">
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/argproduc?igsh=MXI5NjVkMXhvZmU1dw%3D%3D&utm_source=qr"
             aria-label="Instagram"
             className="grid size-9 place-items-center rounded-md border border-border text-muted-foreground transition-colors hover:border-neon hover:text-neon"
           >
             <Instagram className="size-4" />
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://cl.linkedin.com/company/argos-producciones-spa"
             aria-label="LinkedIn"
             className="grid size-9 place-items-center rounded-md border border-border text-muted-foreground transition-colors hover:border-neon hover:text-neon"
           >

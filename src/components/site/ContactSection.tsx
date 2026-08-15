@@ -19,10 +19,10 @@ export function ContactSection() {
 
           <ul className="mt-10 grid gap-4 text-sm">
             <li className="flex items-center gap-3 text-muted-foreground">
-              <Phone className="size-4 shrink-0 text-neon" /> +56 9 XXXX XXXX
+              <Phone className="size-4 shrink-0 text-neon" /> +56 9 9657 5645
             </li>
             <li className="flex items-center gap-3 text-muted-foreground">
-              <Mail className="size-4 shrink-0 text-neon" /> contacto@verticeav.cl
+              <Mail className="size-4 shrink-0 text-neon" /> argosproduccionyrental@gmail.com
             </li>
             <li className="flex items-center gap-3 text-muted-foreground">
               <MapPin className="size-4 shrink-0 text-neon" /> Santiago, Chile
