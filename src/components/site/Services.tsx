@@ -35,7 +35,7 @@ const GROUPS: Group[] = [
     index: "01",
     title: "Eventos & Stage",
     blurb:
-      "Montaje técnico integral para conciertos, festivales y activaciones masivas, con equipos de touring y crew certificado.",
+      "Puesta en escena completa para eventos en vivo: sonido, luces, pantallas y el equipo humano para que todo salga perfecto.",
     items: [
       { icon: Speaker, label: "Amplificación" },
       { icon: Lightbulb, label: "Iluminación" },
@@ -48,28 +48,28 @@ const GROUPS: Group[] = [
   {
     id: "produccion",
     index: "02",
-    title: "Producción AV & TV",
+    title: "Producción General",
     blurb:
-      "Del guion al máster: producción de contenidos broadcast, cine y corporativo con flujos multicámara de nivel televisivo.",
+      "De tu cabeza a la pantalla: ejecutamos proyectos audiovisuales, diseño y producción técnica con estándar broadcast para hacer despegar tu marca.",
     items: [
       { icon: Video, label: "Video Corporativo" },
-      { icon: Building2, label: "Institucional" },
+      { icon: Building2, label: "Producción Técnica" },
       { icon: Clapperboard, label: "Cine" },
       { icon: Tv, label: "Producción de TV" },
-      { icon: Camera, label: "Registro Multicámara" },
-      { icon: ClipboardCheck, label: "Ejecución de proyectos" },
+      { icon: Camera, label: "Diseño Web" },
+      { icon: ClipboardCheck, label: "Diseño Gráfico" },
     ],
   },
   {
     id: "postproduccion",
     index: "03",
-    title: "Postproducción & Audio",
+    title: "Postproducción",
     blurb:
       "Salas de post y estudios de audio para terminar tu material con estándar de broadcast, cine y plataformas digitales.",
     items: [
-      { icon: Mic, label: "Producción General de Sonido" },
-      { icon: Scissors, label: "Postproducción AV" },
-      { icon: AudioLines, label: "Edición de Audio" },
+      { icon: Mic, label: "Postproducción AV" },
+      { icon: Scissors, label: "Postproducción de Audio" },
+      { icon: AudioLines, label: "Diseño Sonoro" },
       { icon: Footprints, label: "Foley" },
       { icon: SlidersHorizontal, label: "Mezcla" },
       { icon: Disc3, label: "Mastering" },

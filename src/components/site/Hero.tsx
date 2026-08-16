@@ -27,7 +27,7 @@ export function Hero() {
           transition={{ duration: 0.6 }}
           className="mb-5 inline-flex w-fit items-center gap-2 rounded-full border border-border px-4 py-1.5 text-[10px] font-semibold uppercase tracking-[0.28em] text-neon"
         >
-          Audio · Video · Iluminación · Stage
+          Audio · Video · Iluminación · Stage · Diseño
         </motion.p>
 
         <motion.h1
@@ -46,7 +46,7 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="mt-6 max-w-2xl text-base text-muted-foreground sm:text-lg"
         >
-          Soluciones integrales en Sonido, Video, Iluminación, Streaming y Producción de Eventos.
+          Soluciones integrales en Sonido, Video, Iluminación, Diseño, Streaming y Producción de Eventos.
         </motion.p>
 
         <motion.div

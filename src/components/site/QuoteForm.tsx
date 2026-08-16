@@ -6,15 +6,35 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { SERVICE_OPTIONS } from "./nav-config";
 
-type Status = "idle" | "sending" | "sent";
+type Status = "idle" | "sending" | "sent" | "error";
 
 export function QuoteForm({ compact = false }: { compact?: boolean }) {
   const [status, setStatus] = useState<Status>("idle");
 
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setStatus("sending");
-    window.setTimeout(() => setStatus("sent"), 1200);
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      // Petición POST real a Netlify con los datos del formulario
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData as any).toString(),
+      });
+
+      if (response.ok) {
+        setStatus("sent");
+      } else {
+        setStatus("error");
+      }
+    } catch (error) {
+      console.error("Error al enviar formulario:", error);
+      setStatus("error");
+    }
   }
 
   if (status === "sent") {
@@ -44,7 +64,9 @@ export function QuoteForm({ compact = false }: { compact?: boolean }) {
       {/* Campo oculto obligatorio para Netlify */}
       <input type="hidden" name="form-name" value="cotizacion" />
       <p className="hidden">
-        <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+        <label>
+          Don’t fill this out if you’re human: <input name="bot-field" />
+        </label>
       </p>
 
       <div className={compact ? "grid gap-4" : "grid gap-4 sm:grid-cols-2"}>
@@ -90,6 +112,13 @@ export function QuoteForm({ compact = false }: { compact?: boolean }) {
           placeholder="Cuéntanos fecha, lugar y requerimientos técnicos del proyecto."
         />
       </div>
+
+      {status === "error" && (
+        <p className="text-xs text-red-500">
+          Ocurrió un error al enviar. Por favor intenta de nuevo o contáctanos por WhatsApp.
+        </p>
+      )}
+
       <Button type="submit" size="lg" disabled={status === "sending"} className="w-full">
         {status === "sending" ? (
           <>

@@ -1,7 +1,7 @@
 export const NAV_SECTIONS = [
   { id: "eventos", label: "Eventos & Stage" },
-  { id: "produccion", label: "Producción AV & TV" },
-  { id: "postproduccion", label: "Postproducción & Audio" },
+  { id: "produccion", label: "Producción General" },
+  { id: "postproduccion", label: "Postproducción" },
 ] as const;
 
 export const SERVICE_OPTIONS = NAV_SECTIONS.map((s) => s.label);
@@ -29,7 +29,7 @@ export function scrollToSection(id: string) {
   }
 
   // Lógica para las otras dos secciones
-  const offset =
+  const offset = 50
     rect.height > viewportHeight ? 96 : Math.max(96, (viewportHeight - rect.height) / 2);
   const top = rect.top + window.scrollY - offset;
   window.scrollTo({ top: Math.max(top, 0), behavior: "smooth" });

@@ -10,7 +10,7 @@ import streaming from "@/assets/work-streaming.jpg";
 import cine from "@/assets/work-cine.jpg";
 
 const PROJECTS = [
-  { title: "Festival Costanera Live", category: "Eventos & Stage", image: stage, span: true },
+  { title: "Fonda Típico Chileno", category: "Eventos & Stage", image: stage, span: true },
   { title: "Late Show Nacional", category: "Producción TV", image: tv, span: false },
   { title: "Estudio Mezcla & Mastering", category: "Postproducción", image: audio, span: false },
   { title: "Summit Corporativo 2026", category: "Eventos & Stage", image: corporate, span: false },
@@ -32,12 +32,11 @@ export function Portfolio() {
             <h2 className="mt-3 text-3xl uppercase sm:text-5xl">Proyectos realizados</h2>
           </div>
           <p className="max-w-sm text-sm text-muted-foreground">
-            Más de 400 producciones en vivo, broadcast y contenido de marca ejecutadas en Chile y
-            Latinoamérica.
+            Nos apasiona el detalle técnico y la precisión en terreno. Cada proyecto es un compromiso con la excelencia audiovisual, sin margen de error.
           </p>
         </div>
 
-        <div className="mt-12 grid auto-rows-[16rem] gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid auto-rows-64 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {PROJECTS.map((project, i) => (
             <motion.button
               key={project.title}
@@ -59,7 +58,7 @@ export function Portfolio() {
                 height={900}
                 className="absolute inset-0 size-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
               />
-              <span className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
+              <span className="absolute inset-0 bg-linear-to-t from-background via-background/40 to-transparent" />
               <span className="absolute right-4 top-4 grid size-11 place-items-center rounded-full border border-border glass-panel opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                 <Play className="size-4 text-neon" />
               </span>
